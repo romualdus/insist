@@ -1,0 +1,28 @@
+.btn {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  border: 0;
+  background-color: $color-secondary;
+  font-size: 0.8em;
+  font-weight: 700;
+  color: $color-primary;
+  cursor: pointer;
+
+  &--text {
+    width: auto;
+    padding: 0 1.2rem;
+
+    i {
+      margin-right: 0.5rem;
+    }
+  }
+
+  &--small {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+}

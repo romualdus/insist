@@ -1,0 +1,14 @@
+.textbox {
+  position: relative;
+  background-color: $color-secondary;
+  padding: 0 1rem;
+
+  input {
+    height: 2.5rem;
+    width: 100%;
+    border: 0;
+    background-color: transparent;
+    color: $color-primary;
+    outline: none;
+  }
+}

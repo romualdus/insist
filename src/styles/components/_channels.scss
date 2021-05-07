@@ -1,0 +1,26 @@
+.channels {
+  &__header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 2em 0 1em;
+  }
+
+  &__list {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.2em 0.8em;
+    padding: 1.2em 0;
+    border-top: 2px solid $color-secondary;
+
+    @include breakpoint(desktop) {
+      border-bottom: 1px solid $color-secondary;
+    }
+  }
+
+  .section__item {
+    height: 7rem;
+    background-color: $color-secondary;
+  }
+}

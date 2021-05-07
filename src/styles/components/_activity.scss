@@ -1,0 +1,59 @@
+.activity {
+  &__header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 2em 0 1em;
+  }
+
+  &__list {
+    box-sizing: border-box;
+    display: grid;
+    align-content: space-between;
+    padding: 1.2em 0;
+    border-top: 2px solid $color-secondary;
+    border-bottom: 1px solid $color-secondary;
+    height: 30em;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    column-gap: 0.5em;
+    align-items: center;
+    padding: 0.5em;
+    border: 1px solid transparent;
+    cursor: pointer;
+
+    &__image {
+      grid-row: 1/4;
+      grid-column: 1/2;
+      background-color: $color-secondary;
+      height: 3.6em;
+      width: 4.8em;
+    }
+
+    &__detail {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+
+      @include breakpoint(desktop) {
+        width: 15rem;
+      }
+    }
+
+    .txt-body {
+      line-height: 1;
+    }
+
+    i {
+      margin-right: 0.5rem;
+    }
+
+    &:hover {
+      border-color: $color-secondary;
+    }
+  }
+}

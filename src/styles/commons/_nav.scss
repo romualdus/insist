@@ -1,0 +1,29 @@
+.nav {
+  padding: 1em 0;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: $color-secondary;
+  overflow-x: auto;
+
+  ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 1;
+
+    li {
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    span {
+      margin: 0 1.5rem;
+    }
+  }
+
+  &--footer {
+    border: 0;
+    padding: 2em 0;
+  }
+}

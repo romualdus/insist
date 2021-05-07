@@ -1,0 +1,17 @@
+.footer {
+  border-top: 1px solid $color-secondary;
+  padding: 1em 0;
+
+  &__social {
+    display: flex;
+    flex-wrap: wrap;
+
+    .btn {
+      margin-right: 1em;
+    }
+  }
+
+  .nav:last-child {
+    padding-top: 0.5em;
+  }
+}

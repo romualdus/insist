@@ -1,0 +1,61 @@
+$color-primary: #953e47;
+$color-secondary: #f4e3cf;
+
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+}
+
+html,
+button {
+  font-family: "Lato", sans-serif;
+  color: $color-secondary;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $color-primary;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+
+.container {
+  max-width: 1024px;
+  margin: auto;
+  padding: 0 1rem;
+
+  &--main {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 1.2em;
+
+    @include breakpoint(desktop) {
+      grid-template-columns: 2fr 1fr;
+      margin-bottom: 6em;
+    }
+  }
+}
+
+@import "typography";
+
+@import "commons/button";
+@import "commons/textbox";
+@import "commons/nav";
+@import "commons/section";
+
+@import "components/header";
+@import "components/activity";
+@import "components/channels";
+@import "components/footer";

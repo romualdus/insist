@@ -1,0 +1,113 @@
+.section {
+  &__header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: end;
+    margin: 2em 0 1em;
+
+    .txt-body {
+      justify-self: end;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 0.8em;
+    height: 30em;
+
+    grid-template-areas:
+      "section-item--one section-item--one section-item--two"
+      "section-item--one section-item--one section-item--three"
+      "section-item--four section-item--five section-item--action";
+  }
+
+  &__item {
+    box-sizing: border-box;
+    display: grid;
+    align-content: end;
+    padding: 0.5em;
+    background-color: $color-secondary;
+    color: $color-primary;
+    cursor: pointer;
+
+    h3 {
+      margin-bottom: 0.2rem;
+    }
+
+    &__text {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      &--documents {
+        display: block;
+
+        h4 {
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+
+        @include breakpoint(desktop) {
+          white-space: nowrap;
+          width: 12rem;
+        }
+      }
+
+      @include breakpoint(desktop) {
+        flex-wrap: nowrap;
+      }
+    }
+
+    &--1 {
+      grid-area: section-item--one;
+      height: auto;
+    }
+    &--2 {
+      grid-area: section-item--two;
+    }
+    &--3 {
+      grid-area: section-item--three;
+    }
+    &--4 {
+      grid-area: section-item--four;
+    }
+    &--5 {
+      grid-area: section-item--five;
+    }
+
+    &--action {
+      grid-area: section-item--action;
+      grid-template-columns: 1fr 2.5fr;
+      column-gap: 0.5em;
+      align-items: center;
+      align-content: center;
+      color: $color-secondary;
+      background-color: transparent;
+      border: 1px solid $color-secondary;
+      white-space: break-spaces;
+      transition: background-color 0.1s;
+
+      &:hover {
+        background-color: $color-secondary;
+        color: $color-primary;
+
+        .section__item__icon {
+          border-color: $color-primary;
+        }
+      }
+    }
+
+    &__icon {
+      justify-self: end;
+      display: grid;
+      place-content: center;
+      height: 2rem;
+      width: 2rem;
+      border: 2px solid $color-secondary;
+      border-radius: 2rem;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.txt-title {
+  font-weight: 300;
+  font-size: 2em;
+
+  @include breakpoint(desktop) {
+    font-size: 2.5em;
+  }
+}
+
+.txt-subtitle {
+  font-weight: 400;
+  font-size: 2em;
+}
+
+.txt-subsubtitle {
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+.txt-body {
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.3;
+
+  &--big {
+    font-size: 1.2rem;
+  }
+
+  &--small {
+    font-size: 0.75rem;
+  }
+
+  &--smallest {
+    font-size: 0.5rem;
+  }
+
+  &--bold {
+    font-weight: 700;
+  }
+}

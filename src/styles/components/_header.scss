@@ -1,0 +1,62 @@
+header {
+  .container--header {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 1.2em;
+    background-color: $color-primary;
+    padding: 2em 1em
+  }
+
+  .txt-title {
+    margin-right: 1.5rem;
+    span {
+      font-weight: 400;
+    }
+  }
+
+  .textbox, .btn--upload {
+    display: none;
+  }
+
+  @include breakpoint(desktop) {
+    .container--header {
+      grid-template-columns: auto 1fr auto auto;
+      justify-content: start;
+      padding: 2em 1em 3em;
+    }
+    .textbox, .btn--upload {
+      display: block;
+    }
+  }
+}
+
+.header-profile {
+  display: flex;
+  flex-wrap: wrap;
+
+  .btn {
+    margin-right: 0.5rem;
+  }
+
+  .txt-body {
+    line-height: 1;
+  }
+
+  .badge {
+    position: relative;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 1.2rem;
+    width: 1.2rem;
+    top: -0.5rem;
+    border-radius: 2rem;
+    background-color: $color-secondary;
+
+    .txt-body {
+      color: $color-primary;
+    }
+  }
+}
